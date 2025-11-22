@@ -251,7 +251,7 @@ git commit -m "docs: 更新安装指南"
 · - ** 功能讨论: Discussions **
 · - **邮箱联系:zhuangjiunang@gmail.com **
 · - **文档网站: GitHub Wiki**
-· - **官方网站[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://zhuangjiunanp.github.io)**
+· - **官方网站[![License](https://zhuangjiunanp.github.io/Webdevelopmentresources/ic_launcher.png)](https://zhuangjiunanp.github.io)**
 
 ------------------------------------------------------------------------
 
