@@ -1,7 +1,7 @@
 # Advanced Download Manager 🚀
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Kotlin](https://img.shields.io/badge/Kotlin-1.8.22-purple.svg)](https://kotlinlang.org)
+[![Kotlin](https://img.shields.io/badge/Java-1.8.22-purple.svg)](https://kotlinlang.org)
 [![Android](https://img.shields.io/badge/Android-8.0%2B-green.svg)](https://android.com)
 [![AI-Beta](https://img.shields.io/badge/AI--Beta-Available-orange.svg)](https://github.com/your-username/your-repo/releases/tag/ai-beta)
 
@@ -238,8 +238,9 @@ Licensed under the Apache License, Version 2.0.
 - 功能讨论: Discussions  
 - 邮箱联系: zhuangjiunang@gmail.com  
 - 文档网站: GitHub Wiki  
-- 官方网站: https://zhuangjiunanp.github.io  [![License](https://zhuangjiunanp.github.io/Webdevelopmentresources/ic_launcher.png)](https://zhuangjiunanp.github.io)
+- 官方网站: https://zhuangjiunanp.github.io 
 
+[![License](https://zhuangjiunanp.github.io/Webdevelopmentresources/ic_launcher.png)](https://zhuangjiunanp.github.io)
 ---
 
 如果这个项目对您有帮助，请给我们一颗 ⭐ 以示支持！
