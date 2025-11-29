@@ -84,7 +84,7 @@
 
 #### 源码编译
 ```bash
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/Zhuangjiunanp/Download-Manager.git
 cd your-repo
 ./gradlew assembleRelease
 ```
