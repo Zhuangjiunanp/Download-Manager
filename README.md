@@ -37,7 +37,7 @@
 
 | 主下载界面 | 扩展页面详情 | 浏览器集成 | 功能强大的设置 |
 |-----------|----------|------------|------------|
-| ![主界面](https://zhuangjiunanp.github.io/Lesson/expand.jpg) | ![扩展](https://via.placeholder.com/300x600?text=任务详情) | ![浏览器]([https://via.placeholder.com/300x600?text=浏览器](https://zhuangjiunanp.github.io/Lesson/)) | ![设置](https://via.placeholder.com/300x600?text=浏览器) |
+| ![主界面](https://zhuangjiunanp.github.io/Lesson/home.jpg) | ![扩展](https://zhuangjiunanp.github.io/Lesson/expand.jpg) | ![浏览器](https://zhuangjiunanp.github.io/Lesson/web.jpg) | ![设置](https://zhuangjiunanp.github.io/Lesson/settings.jpg) |
 
 
 ## 🛠 技术架构
