@@ -89,34 +89,32 @@ cd your-repo
 ./gradlew assembleRelease
 ```
 
-#🚀 快速开始
+# 🚀 快速开始
 
-##基础下载
+## 基础下载
 
-1.  直接下载: 在主界面输入下载链接
-2.  浏览器下载: 使用内置浏览器访问网页，点击下载链接
-3.  批量操作: 长按任务进行多选，批量管理
+1. 直接下载: 在主界面输入下载链接  
+2. 浏览器下载: 使用内置浏览器访问网页，点击下载链接  
+3. 批量操作: 长按任务进行多选，批量管理  
 
-###高级用法
+### 高级用法
 
-####代码集成示例
+#### 代码集成示例
 
-``` kotlin
+```kotlin
 // 创建下载任务
 val task = DownloadTask.Builder()
     .url("https://example.com/large-file.zip")
     .title("大型资源文件")
     .destination(Environment.DIRECTORY_DOWNLOADS)
-    .threadCount(8)                    // 8线程下载
-    .enableResume(true)               // 启用断点续传
+    .threadCount(8)
+    .enableResume(true)
     .notificationVisibility(NotificationVisibility.VISIBLE)
     .addHeader("User-Agent", "Advanced-Download-Manager/1.0")
     .build()
 
-// 提交任务
 val taskId = downloadManager.enqueue(task)
 
-// 监控进度
 downloadManager.getProgress(taskId).collect { progress ->
     println("进度: ${progress.percent}%")
     println("速度: ${progress.speedBps} B/s")
@@ -124,14 +122,14 @@ downloadManager.getProgress(taskId).collect { progress ->
 }
 ```
 
-####SFTP 下载配置
+#### SFTP 下载配置
 
-``` kotlin
+```kotlin
 val sftpConfig = SftpConfig.Builder()
     .host("sftp.example.com")
     .port(22)
     .username("your-username")
-    .privateKey(privateKey)  // 支持密钥认证
+    .privateKey(privateKey)
     .remotePath("/files/large-backup.tar.gz")
     .localPath("/sdcard/Backups/")
     .build()
@@ -139,11 +137,11 @@ val sftpConfig = SftpConfig.Builder()
 sftpDownloader.download(sftpConfig)
 ```
 
-###⚙️ 配置说明
+### ⚙️ 配置说明
 
-####网络设置
+#### 网络设置
 
-``` yaml
+```yaml
 下载设置:
   同时任务数: 1-5个可调
   单任务线程数: 1-16线程
@@ -152,111 +150,98 @@ sftpDownloader.download(sftpConfig)
   自动重试: 3次(可配置)
 ```
 
-##存储管理
+## 存储管理
 
-· - **默认路径: /sdcard/Download/ · 分类存储: 自动按类型分类到子文件夹 ·**
+- **默认路径:** /sdcard/Download/  
+- **分类存储:** 自动按类型分类到子文件夹  
+- **历史记录:** 下载历史保存与清理策略  
+- **缓存管理:** 自动清理临时文件  
 
-· - **历史记录: 下载历史保存与清理策略 · 缓存管理: 自动清理临时文件**
+## 通知定制
 
-##通知定制
+- **进度通知:** 显示实时下载进度  
+- **完成通知:** 下载完成提醒与打开选项  
+- **错误通知:** 失败原因分析与重试建议  
 
-· - **进度通知: 显示实时下载进度 · 完成通知: 下载完成提醒与打开选项 ·**
-· - **错误通知: 失败原因分析与重试建议**
+# 🔄 更新日志
 
-#🔄 更新日志
+## 版本 6.5.5 (当前)
 
-#版本 6.5.5 (当前)
+- ✅ 基础多协议下载引擎  
+- ✅ 智能断点续传  
+- ✅ 多线程加速  
+- ✅ Material Design 3 界面  
+- ✅ 基础通知系统  
 
-· - **· ✅ 基础多协议下载引擎 **
-· - **✅ 智能断点续传 **
-· - **✅ 多线程加速 **
-· - **✅ Material**
-· - **Design 3 界面 **
-· - **✅ 基础通知系统**
+## AI-Beta 版本特性
 
-##AI-Beta 版本特性
+- 🧠 智能下载调度  
+- 🔮 网络状态预测  
+- 📊 下载模式自学习  
+- ⚡ 动态参数优化  
 
-· - **· 🧠 智能下载调度 **
-· - **🔮 网络状态预测 **
-· - **📊 下载模式自学习 **
-· - **⚡动态参数优化**
+## 开发路线图
 
-##开发路线图
+- 🔄 v1.1.0: 插件系统架构  
+- 🔄 v1.2.0: 云存储同步  
+- 🔄 v1.3.0  
+- 🔄 v2.0.0: 桌面版与多平台支持  
+- [未] 跨设备任务同步  
 
-· - **🔄 v1.1.0: 插件系统架构 **
-· - **🔄 v1.2.0: 云存储同步 **
-· - **🔄 v1.3.0:**
-· - **🔄 v2.0.0: 桌面版与多平台支持**
-· - **[未]跨设备任务同步 **
+## 🤝 参与贡献
 
-##🤝 参与贡献
+我们热烈欢迎社区贡献！请阅读我们的贡献指南。
 
-###我们热烈欢迎社区贡献！请阅读我们的贡献指南。
+# 开发环境搭建
 
-#开发环境搭建
+1. 安装 Android Studio Arctic Fox+  
+2. 克隆仓库并导入项目  
+3. 配置 Kotlin 1.8.22 SDK  
+4. 同步 Gradle 依赖  
 
-· - **1.  安装 Android Studio Arctic Fox+**
-· - **2.  克隆仓库并导入项目**
-· - **3.  配置 Kotlin 1.8.22 SDK**
-· - **4.  同步 Gradle 依赖**
+# 贡献方式
 
-#贡献方式
+## 代码贡献
 
-##代码贡献:
-· - **修复 Bug、实现新功能 
-· - **文档改进: 完善文档、翻译本地化**
-· - **测试反馈: 测试各版本并提供反馈 **
-· - **功能建议: 在 Issues 提出宝贵建议**
+- 修复 Bug、实现新功能  
+- 文档改进: 完善文档、翻译本地化  
+- 测试反馈: 测试各版本并提供反馈  
+- 功能建议: 在 Issues 提出宝贵建议  
 
-#提交规范
+# 提交规范
 
-``` bash
+```bash
 git commit -m "feat: 添加SFTP下载支持"
 git commit -m "fix: 修复断点续传内存泄漏"
 git commit -m "docs: 更新安装指南"
 ```
 
-#📄 许可证
+# 📄 许可证
 
-    Copyright 2024 Advanced Download Manager Contributors
+Licensed under the Apache License, Version 2.0.  
+详见 LICENSE 文件。
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+# 🏆 致谢
 
-        http://www.apache.org/licenses/LICENSE-2.0
+特别感谢以下开源项目：
 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+- AndroidX  
+- Kotlin  
+- ExoPlayer  
+- GeckoView  
+- OkHttp  
+- 以及所有项目依赖的开源库作者  
 
-##完整文本请参阅 LICENSE 文件。
+# 📞 支持与反馈
 
-#🏆 致谢
+- 问题报告: GitHub Issues  
+- 功能讨论: Discussions  
+- 邮箱联系: zhuangjiunang@gmail.com  
+- 文档网站: GitHub Wiki  
+- 官方网站: https://zhuangjiunanp.github.io  [![License](https://zhuangjiunanp.github.io/Webdevelopmentresources/ic_launcher.png)](https://zhuangjiunanp.github.io)
 
-##特别感谢以下开源项目：
+---
 
-· - **AndroidX - 现代化 Android 开发基础 **
-· - **Kotlin - 让 Android 开发更愉快 **
-· - **ExoPlayer - 强大的媒体播放能力 **
-· - **GeckoView - 高性能网页渲染 **
-· - **OkHttp -可靠的网络通信 **
-· - **以及所有项目依赖的开源库作者**
-
-#📞 支持与反馈
-
- · - **问题报告: GitHub Issues **
-· - ** 功能讨论: Discussions **
-· - **邮箱联系:zhuangjiunang@gmail.com **
-· - **文档网站: GitHub Wiki**
-· - **官方网站[![License](https://zhuangjiunanp.github.io/Webdevelopmentresources/ic_launcher.png)](https://zhuangjiunanp.github.io)**
-
-------------------------------------------------------------------------
-
-::: {align="center"}
 如果这个项目对您有帮助，请给我们一颗 ⭐ 以示支持！
 
-让下载变得更智能、更高效
-:::
+让下载变得更智能、更高效！
