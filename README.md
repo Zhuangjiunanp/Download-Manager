@@ -101,41 +101,40 @@ cd your-repo
 
 #### 代码集成示例
 
-```kotlin
-// 创建下载任务
-val task = DownloadTask.Builder()
-    .url("https://example.com/large-file.zip")
-    .title("大型资源文件")
-    .destination(Environment.DIRECTORY_DOWNLOADS)
-    .threadCount(8)
+``` java
+DownloadTask task = new DownloadTask.Builder()
+    .setUrl("https://example.com/large-file.zip")
+    .setTitle("大型资源文件")
+    .setDestination(Environment.DIRECTORY_DOWNLOADS)
+    .setThreadCount(8)
     .enableResume(true)
-    .notificationVisibility(NotificationVisibility.VISIBLE)
     .addHeader("User-Agent", "Advanced-Download-Manager/1.0")
-    .build()
+    .build();
 
-val taskId = downloadManager.enqueue(task)
+int taskId = downloadManager.enqueue(task);
 
-downloadManager.getProgress(taskId).collect { progress ->
-    println("进度: ${progress.percent}%")
-    println("速度: ${progress.speedBps} B/s")
-    println("剩余: ${progress.remainingTime}")
-}
+downloadManager.getProgress(taskId, progress -> {
+    System.out.println("进度: " + progress.getPercent() + "%");
+    System.out.println("速度: " + progress.getSpeedBps() + " B/s");
+    System.out.println("剩余: " + progress.getRemainingTime());
+});
 ```
 
 #### SFTP 下载配置
 
-```kotlin
-val sftpConfig = SftpConfig.Builder()
-    .host("sftp.example.com")
-    .port(22)
-    .username("your-username")
-    .privateKey(privateKey)
-    .remotePath("/files/large-backup.tar.gz")
-    .localPath("/sdcard/Backups/")
-    .build()
+``` java
+SftpConfig config = new SftpConfig.Builder()
+    .setHost("sftp.example.com")
+    .setPort(22)
+    .setUsername("your-username")
+    .setPrivateKey(privateKey)
+    .setRemotePath("/files/large-backup.tar.gz")
+    .setLocalPath("/sdcard/Backups/")
+    .build();
 
-sftpDownloader.download(sftpConfig)
+sftpDownloader.download(config);
 ```
+
 
 ### ⚙️ 配置说明
 
@@ -184,9 +183,16 @@ sftpDownloader.download(sftpConfig)
 
 - 🔄 v1.1.0: 插件系统架构  
 - 🔄 v1.2.0: 云存储同步  
-- 🔄 v1.3.0  
-- 🔄 v2.0.0: 桌面版与多平台支持  
-- [未] 跨设备任务同步  
+- 🔄 v1.3.0:~
+- 🔄 v2.0.0: 桌面版与多平台支持
+- 🔄 v6.5.5-bata_1: 废除Android 5.0
+- 🔄 v6.5.5-bata_2: 废除Android 6.0
+- 🔄 v6.5.5-bata_3: 废除Android 7.0
+- [未] 跨设备任务同步
+- [未] 替换为原版清除数据
+- [开发中] 将Geckoview开发到极致
+- [开发中] 允许Geckoview使用[Firefox 火狐浏览器](https://www.firefox.com)Firefox 火狐浏览器的.xpi扩展依赖文件
+- [开发中] 更改开屏动画
 
 ## 🤝 参与贡献
 
