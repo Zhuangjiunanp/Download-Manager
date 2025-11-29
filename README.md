@@ -1,7 +1,7 @@
 # Advanced Download Manager 🚀
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Kotlin](https://img.shields.io/badge/Java-1.8.22-purple.svg)](https://kotlinlang.org)
+![JDK](https://img.shields.io/badge/JDK-17-orange)
 [![Android](https://img.shields.io/badge/Android-8.0%2B-green.svg)](https://android.com)
 [![AI-Beta](https://img.shields.io/badge/AI--Beta-Available-orange.svg)](https://github.com/your-username/your-repo/releases/tag/ai-beta)
 
