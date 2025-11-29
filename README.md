@@ -77,10 +77,10 @@
 ### 下载方式
 
 #### 正式稳定版
-从 [GitHub Releases](https://github.com/your-username/your-repo/releases/latest) 下载最新稳定版 APK。
+从 [GitHub Releases](https://github.com/Zhuangjiunanp/Download-Manager/releases) 下载最新稳定版 APK。
 
 #### AI-Beta 测试版
-体验最新 AI 功能：[AI-Beta 版本](https://github.com/your-username/your-repo/releases/tag/ai-beta)
+体验最新 AI 功能：[AI-Beta 版本](https://github.com/Zhuangjiunanp/Download-Manager/releases)
 
 #### 源码编译
 ```bash
